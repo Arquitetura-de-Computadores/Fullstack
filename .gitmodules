@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Arquitetura-de-Computadores/Frontend.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/Arquitetura-de-Computadores/Backend.git
