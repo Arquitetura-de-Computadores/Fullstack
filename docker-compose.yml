@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend  # Caminho correto para a pasta backend
+    ports:
+      - "5050:5050"
+    environment:
+      - FLASK_ENV=production
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend  # Caminho para o Dockerfile do frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
